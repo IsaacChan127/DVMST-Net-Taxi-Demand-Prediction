@@ -1,20 +1,22 @@
-# DVMST-Net Taxi Demand Prediction (NYC)
+# NYC Taxi Demand Prediction using DVMST-Net Inspired Model
 
 ## Overview
 
-This project implements a deep learning–based taxi demand forecasting system inspired by the DVMST-Net spatio-temporal architecture. The model predicts short-term hourly taxi pickup demand for individual New York City taxi zones using historical demand sequences and temporal contextual features.
+This project implements a deep learning model for short-term taxi demand prediction using historical New York City taxi trip data. The system forecasts hourly taxi pickup demand for individual taxi zones by learning temporal demand patterns and spatial relationships between neighbouring regions.
 
-The implementation focuses on zone-level modelling, where each taxi zone is trained independently using historical demand data.
+The model is inspired by the DVMST-Net spatio-temporal architecture and combines custom spatial feature learning with LSTM-based sequence modelling.
 
 ---
 
-## Dataset
+## How the Model Works
 
-The model uses aggregated taxi pickup demand derived from the NYC Taxi and Limousine Commission (TLC) trip record dataset.
+The workflow follows a structured machine learning pipeline:
 
-Raw trip-level taxi data is transformed into a pivot matrix where:
+1. Raw taxi trip data is aggregated into hourly pickup demand counts.
+2. Demand is organised into a pivot matrix where each column represents a taxi zone.
+3. Historical demand sequences are constructed for supervised learning.
+4. Temporal features are added using one-hot encoding.
+5. A neural network learns spatial and temporal demand patterns to predict future demand.
 
-- Rows represent hourly timestamps.
-- Columns represent taxi pickup zones.
+---
 
-Input data is loaded from:
