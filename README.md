@@ -19,4 +19,7 @@ The workflow follows a structured machine learning pipeline:
 5. A neural network learns spatial and temporal demand patterns to predict future demand.
 
 ---
+## Dataset
+
+The datasets used in this project are from the NYC Taxi Trip Record https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page. All copyrights belonged to TLC Trip Record.
 
